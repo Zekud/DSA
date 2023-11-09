@@ -1,16 +1,16 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        string pal = to_string(x);
-        int left{0};
-        int right = pal.length()-1;
-        while(left<right){
-            if(pal[left] != pal[right]){
-                return false;
-            }
-            left++;
-            right--;    
+        if(x<0) return false; 
+        if(x!=0 && x%10==0) return false;
+        int rev = 0;
+        while(x>rev){
+            int lastDigit = x%10;
+            rev= rev*10 + lastDigit;
+            x/=10;
         }
-        return true;
+        
+        return (x==rev) || (x==(rev/10));
+        
     }
 };
