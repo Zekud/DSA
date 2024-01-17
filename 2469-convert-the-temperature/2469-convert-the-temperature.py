@@ -1,0 +1,8 @@
+class Solution:
+    def convertTemperature(self, celsius: float) -> List[float]:
+        kelvin = round(celsius + 273.15,5)
+        fahrenheit = round(celsius * 1.80 + 32.00,5)
+        lst= []
+        lst.append(kelvin)
+        lst.append(fahrenheit)
+        return lst
