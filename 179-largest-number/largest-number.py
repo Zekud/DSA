@@ -8,4 +8,4 @@ class Solution:
             else:
                 return 0   
         nums_sorted = list(map(str, sorted(nums, key=cmp_to_key(strsort))))
-        return str(int("".join(nums_sorted)))
+        return ''.join(nums_sorted) if nums_sorted[0] != '0' else '0'
