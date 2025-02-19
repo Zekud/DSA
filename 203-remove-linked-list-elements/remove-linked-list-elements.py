@@ -12,7 +12,7 @@ class Solution:
             if curr.val == val:
                 prev.next = curr.next
             else:
-                prev.next = curr
+                
                 prev = prev.next
             curr = curr.next
         return dummy.next
