@@ -1,23 +1,5 @@
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        # l=r=0
-        
-        # for r in range(len(bills)):
-        #     tot = 0
-        #     if bills[r] == 5:
-        #         continue
-        #     check = False    
-        #     while l < r:
-        #         tot += bills[l]
-        #         l+=1
-        #         if tot == (bills[r]-5):
-        #             check = True
-        #             break
-        #         elif tot >= (bills[r]-5):
-        #             break
-        #     if not check:
-        #         return False
-        # return True
         count = defaultdict(int)
         for n in bills:
             if n==5:
