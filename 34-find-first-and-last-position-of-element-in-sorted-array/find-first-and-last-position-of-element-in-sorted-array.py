@@ -2,7 +2,9 @@ class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         foccur = float("inf")
         loccur = float("-inf")
-        def bsearch(target,start,end,occ,foccur,loccur):
+
+        def bsearch(target,start,end,occ): 
+            nonlocal foccur,loccur
             while start <= end:
                 mid = start + (end-start)//2
                 if nums[mid] == target:
@@ -22,8 +24,8 @@ class Solution:
                 return loccur
             else:
                 return -1
-        first = bsearch(target,0,len(nums)-1,"first",foccur,loccur)
-        last = bsearch(target,0,len(nums)-1,"last",foccur,loccur)
+        first = bsearch(target,0,len(nums)-1,"first")
+        last = bsearch(target,0,len(nums)-1,"last")
         return [first,last]
         
         
