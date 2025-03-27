@@ -2,7 +2,7 @@ class Solution:
     def validStrings(self, n: int) -> List[str]:
         ans = []
         arr = ["0","1"]
-        def backtrack(path,j):
+        def backtrack(path):
             if len(path) == n:
                 ans.append("".join(path[:]))
                 return 
@@ -12,7 +12,7 @@ class Solution:
                     continue
                 else:
                     path.append(arr[i])
-                    backtrack(path,j+1)
+                    backtrack(path)
                     path.pop()        
-        backtrack([],0)
+        backtrack([])
         return ans
