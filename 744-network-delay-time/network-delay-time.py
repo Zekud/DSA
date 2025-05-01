@@ -12,7 +12,7 @@ class Solution:
                 continue
             visited[node] = time
             for nei,wt in graph[node]:
-                if nei not in visited:
+                # if nei not in visited:
                     heappush(min_heap,(time + wt,nei))
         if len(visited) == n:
             return max(visited.values())
