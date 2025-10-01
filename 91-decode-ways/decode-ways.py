@@ -28,5 +28,4 @@ class Solution:
             dp[i] = dp[i+1]
             if int(s[i:i+2]) <= 26 and i+2 <= n:
                 dp[i] += dp[i+2]
-        print(dp)
         return dp[0]
